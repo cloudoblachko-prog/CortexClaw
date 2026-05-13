@@ -2,20 +2,17 @@
   "agents": {
     "defaults": {
       "model": {
-        "primary": "groq/meta-llama/llama-4-scout-17b-16e-instruct"
+        "primary": "nvidia/meta/llama-4-maverick-17b-128e-instruct"
       }
+    },
+    "scout": {
+      "model": { "primary": "groq/meta-llama/llama-4-scout-17b-16e-instruct" }
     },
     "gpt_oss": {
       "model": { "primary": "groq/openai/gpt-oss-120b" }
     },
-    "whisper": {
-      "model": { "primary": "groq/whisper-large-v3-turbo" }
-    },
     "minimax": {
       "model": { "primary": "nvidia/minimaxai/minimax-m2.7" }
-    },
-    "maverick": {
-      "model": { "primary": "nvidia/meta/llama-4-maverick-17b-128e-instruct" }
     },
     "mistral": {
       "model": { "primary": "nvidia/mistralai/mistral-large-3-675b-instruct-2512" }
@@ -25,6 +22,11 @@
     },
     "ring": {
       "model": { "primary": "openrouter/inclusionai/ring-2.6-1t:free" }
+    }
+  },
+  "media": {
+    "transcription": {
+      "model": "groq/whisper-large-v3-turbo"
     }
   },
   "channels": {
