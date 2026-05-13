@@ -1,6 +1,10 @@
 {
-  "agent": {
-    "model": "groq/llama3-70b-8192"
+  "agents": {
+    "defaults": {
+      "model": {
+        "primary": "groq/llama3-70b-8192"
+      }
+    }
   },
   "channels": {
     "telegram": {
