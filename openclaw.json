@@ -1,0 +1,10 @@
+{
+  "agent": {
+    "model": "groq/llama3-70b-8192"
+  },
+  "channels": {
+    "telegram": {
+      "allowFrom": ["5689194495"]
+    }
+  }
+}
