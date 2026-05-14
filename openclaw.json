@@ -1,4 +1,28 @@
 {
+  "models": {
+    "providers": {
+      "nvidia": {
+        "models": [
+          { "id": "meta/llama-4-maverick-17b-128e-instruct" },
+          { "id": "minimaxai/minimax-m2.7" },
+          { "id": "mistralai/mistral-large-3-675b-instruct-2512" },
+          { "id": "stepfun-ai/step-3.5-flash" }
+        ]
+      },
+      "groq": {
+        "models": [
+          { "id": "meta-llama/llama-4-scout-17b-16e-instruct" },
+          { "id": "openai/gpt-oss-120b" },
+          { "id": "whisper-large-v3-turbo" }
+        ]
+      },
+      "openrouter": {
+        "models": [
+          { "id": "inclusionai/ring-2.6-1t:free" }
+        ]
+      }
+    }
+  },
   "agents": {
     "defaults": {
       "model": {
