@@ -29,7 +29,11 @@
   "agents": {
     "defaults": {
       "model": {
-        "primary": "nvidia/meta/llama-4-maverick-17b-128e-instruct"
+        "primary": "nvidia/meta/llama-4-maverick-17b-128e-instruct",
+        "maxTokens": 8192
+      },
+      "compaction": {
+        "reserveTokensFloor": 20000
       },
       "models": {
         "nvidia/meta/llama-4-maverick-17b-128e-instruct": { "alias": "Maverick" },
