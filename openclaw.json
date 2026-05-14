@@ -12,8 +12,7 @@
       "groq": {
         "models": [
           { "id": "meta-llama/llama-4-scout-17b-16e-instruct" },
-          { "id": "openai/gpt-oss-120b" },
-          { "id": "whisper-large-v3-turbo" }
+          { "id": "openai/gpt-oss-120b" }
         ]
       },
       "openrouter": {
