@@ -57,7 +57,7 @@
   },
   "channels": {
     "telegram": {
-      "allowFrom": ["5689194495"]
+      "allowFrom": [5689194495]
     }
   }
 }
