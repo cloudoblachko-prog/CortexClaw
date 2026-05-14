@@ -68,7 +68,7 @@ COPY --from=workspace-deps /out/${OPENCLAW_BUNDLED_PLUGIN_DIR}/ ./${OPENCLAW_BUN
 
 # Reduce OOM risk on low-memory hosts during dependency installation.
 # Docker builds on small VMs may otherwise fail with "Killed" (exit 137).
-RUN --mount=type=cache,id=s/42893885-8f25-4aea-83f0-8e4bdc919dc3-/root/.local/share/pnpm/store,target=/root/.local/share/pnpm/store,sharing=locked \
+RUN --mount=type=cache,target=/root/.local/share/pnpm/store,sharing=locked \
     NODE_OPTIONS=--max-old-space-size=2048 pnpm install --frozen-lockfile \
       --config.supportedArchitectures.os=linux \
       --config.supportedArchitectures.cpu="$(node -p 'process.arch')" \
@@ -121,7 +121,7 @@ RUN pnpm_config_verify_deps_before_run=false pnpm qa:lab:build
 FROM build AS runtime-assets
 ARG OPENCLAW_EXTENSIONS
 ARG OPENCLAW_BUNDLED_PLUGIN_DIR
-RUN --mount=type=cache,id=s/42893885-8f25-4aea-83f0-8e4bdc919dc3-/root/.local/share/pnpm/store,target=/root/.local/share/pnpm/store,sharing=locked \
+RUN --mount=type=cache,target=/root/.local/share/pnpm/store,sharing=locked \
     CI=true pnpm prune --prod \
       --config.offline=true \
       --config.supportedArchitectures.os=linux \
@@ -160,8 +160,8 @@ WORKDIR /app
 # so it must be installed explicitly here. Without it `/etc/ssl/certs/`
 # stays empty and every HTTPS outbound dies at TLS handshake with
 # `error setting certificate file`.
-RUN --mount=type=cache,id=s/42893885-8f25-4aea-83f0-8e4bdc919dc3-/var/cache/apt,target=/var/cache/apt,sharing=locked \
-    --mount=type=cache,id=s/42893885-8f25-4aea-83f0-8e4bdc919dc3-/var/lib/apt,target=/var/lib/apt,sharing=locked \
+RUN --mount=type=cache,target=/var/cache/apt,sharing=locked \
+    --mount=type=cache,target=/var/lib/apt,sharing=locked \
     apt-get update && \
     DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
       ca-certificates curl git hostname lsof openssl procps python3 tini && \
@@ -201,8 +201,8 @@ RUN install -d -m 0755 "$COREPACK_HOME" && \
 # Install additional system packages needed by your skills or extensions.
 # Example: docker build --build-arg OPENCLAW_DOCKER_APT_PACKAGES="python3 wget" .
 ARG OPENCLAW_DOCKER_APT_PACKAGES=""
-RUN --mount=type=cache,id=s/42893885-8f25-4aea-83f0-8e4bdc919dc3-/var/cache/apt,target=/var/cache/apt,sharing=locked \
-    --mount=type=cache,id=s/42893885-8f25-4aea-83f0-8e4bdc919dc3-/var/lib/apt,target=/var/lib/apt,sharing=locked \
+RUN --mount=type=cache,target=/var/cache/apt,sharing=locked \
+    --mount=type=cache,target=/var/lib/apt,sharing=locked \
     if [ -n "$OPENCLAW_DOCKER_APT_PACKAGES" ]; then \
       apt-get update && \
       DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends $OPENCLAW_DOCKER_APT_PACKAGES; \
@@ -214,8 +214,8 @@ RUN --mount=type=cache,id=s/42893885-8f25-4aea-83f0-8e4bdc919dc3-/var/cache/apt,
 # Must run after node_modules COPY so playwright-core is available.
 ARG OPENCLAW_INSTALL_BROWSER=""
 ENV PLAYWRIGHT_BROWSERS_PATH=/home/node/.cache/ms-playwright
-RUN --mount=type=cache,id=s/42893885-8f25-4aea-83f0-8e4bdc919dc3-/var/cache/apt,target=/var/cache/apt,sharing=locked \
-    --mount=type=cache,id=s/42893885-8f25-4aea-83f0-8e4bdc919dc3-/var/lib/apt,target=/var/lib/apt,sharing=locked \
+RUN --mount=type=cache,target=/var/cache/apt,sharing=locked \
+    --mount=type=cache,target=/var/lib/apt,sharing=locked \
     if [ -n "$OPENCLAW_INSTALL_BROWSER" ]; then \
       apt-get update && \
       DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends xvfb && \
@@ -230,8 +230,8 @@ RUN --mount=type=cache,id=s/42893885-8f25-4aea-83f0-8e4bdc919dc3-/var/cache/apt,
 # Required for agents.defaults.sandbox to function in Docker deployments.
 ARG OPENCLAW_INSTALL_DOCKER_CLI=""
 ARG OPENCLAW_DOCKER_GPG_FINGERPRINT="9DC858229FC7DD38854AE2D88D81803C0EBFCD88"
-RUN --mount=type=cache,id=s/42893885-8f25-4aea-83f0-8e4bdc919dc3-/var/cache/apt,target=/var/cache/apt,sharing=locked \
-    --mount=type=cache,id=s/42893885-8f25-4aea-83f0-8e4bdc919dc3-/var/lib/apt,target=/var/lib/apt,sharing=locked \
+RUN --mount=type=cache,target=/var/cache/apt,sharing=locked \
+    --mount=type=cache,target=/var/lib/apt,sharing=locked \
     if [ -n "$OPENCLAW_INSTALL_DOCKER_CLI" ]; then \
       apt-get update && \
       DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
