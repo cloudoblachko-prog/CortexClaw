@@ -17,12 +17,6 @@
           { "id": "openai/gpt-oss-120b", "name": "GPT-OSS 120B" },
           { "id": "whisper-large-v3-turbo", "name": "Whisper V3" }
         ]
-      },
-      "openrouter": {
-        "baseUrl": "https://openrouter.ai/api/v1",
-        "models": [
-          { "id": "inclusionai/ring-2.6-1t:free", "name": "Ring 2.6" }
-        ]
       }
     }
   },
@@ -40,25 +34,13 @@
         "nvidia/stepfun-ai/step-3.5-flash": { "alias": "Flash" },
         "nvidia/minimaxai/minimax-m2.7": { "alias": "Minimax" },
         "groq/meta-llama/llama-4-scout-17b-16e-instruct": { "alias": "Scout" },
-        "groq/openai/gpt-oss-120b": { "alias": "Quantum" },
-        "openrouter/inclusionai/ring-2.6-1t:free": { "alias": "Omni-Route" }
-      }
-    }
-  },
-  "tools": {
-    "media": {
-      "audio": {
-        "enabled": true,
-        "models": [
-          { "provider": "groq", "model": "whisper-large-v3-turbo" }
-        ]
+        "groq/openai/gpt-oss-120b": { "alias": "Quantum" }
       }
     }
   },
   "channels": {
     "telegram": {
-      "dmPolicy": "allowlist",
-      "allowFrom": [5689194495]
+      "allowFrom": ["5689194495"]
     }
   }
 }
