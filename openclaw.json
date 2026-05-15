@@ -4,17 +4,17 @@
       "nvidia": {
         "baseUrl": "https://integrate.api.nvidia.com/v1",
         "models": [
-          { "id": "meta/llama-4-maverick-17b-128e-instruct", "name": "Maverick 17B", "contextSize": 128000 },
-          { "id": "mistralai/mistral-large-3-675b-instruct-2512", "name": "Mistral Large", "contextSize": 128000 },
-          { "id": "stepfun-ai/step-3.5-flash", "name": "Step 3.5 Flash", "contextSize": 128000 },
-          { "id": "minimaxai/minimax-m2.7", "name": "Minimax m2.7", "contextSize": 128000 }
+          { "id": "meta/llama-4-maverick-17b-128e-instruct", "name": "Maverick 17B" },
+          { "id": "mistralai/mistral-large-3-675b-instruct-2512", "name": "Mistral Large" },
+          { "id": "stepfun-ai/step-3.5-flash", "name": "Step 3.5 Flash" },
+          { "id": "minimaxai/minimax-m2.7", "name": "Minimax m2.7" }
         ]
       },
       "groq": {
         "baseUrl": "https://api.groq.com/openai/v1",
         "models": [
-          { "id": "meta-llama/llama-4-scout-17b-16e-instruct", "name": "Scout 17B", "contextSize": 6000 },
-          { "id": "openai/gpt-oss-120b", "name": "GPT-OSS 120B", "contextSize": 6000 },
+          { "id": "meta-llama/llama-4-scout-17b-16e-instruct", "name": "Scout 17B" },
+          { "id": "openai/gpt-oss-120b", "name": "GPT-OSS 120B" },
           { "id": "whisper-large-v3-turbo", "name": "Whisper V3" }
         ]
       },
@@ -57,6 +57,7 @@
   },
   "channels": {
     "telegram": {
+      "dmPolicy": "allowlist",
       "allowFrom": [5689194495]
     }
   }
