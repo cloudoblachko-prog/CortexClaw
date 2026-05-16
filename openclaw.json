@@ -17,6 +17,13 @@
           { "id": "openai/gpt-oss-120b", "name": "GPT-OSS 120B" },
           { "id": "whisper-large-v3-turbo", "name": "Whisper V3" }
         ]
+      },
+      "openrouter": {
+        "baseUrl": "https://openrouter.ai/api/v1",
+        "models": [
+          { "id": "deepseek/deepseek-v4-flash:free", "name": "DeepSeek V4 Flash" },
+          { "id": "openrouter/owl-alpha", "name": "Owl Alpha" }
+        ]
       }
     }
   },
@@ -34,7 +41,9 @@
         "nvidia/stepfun-ai/step-3.5-flash": { "alias": "Flash" },
         "nvidia/minimaxai/minimax-m2.7": { "alias": "Minimax" },
         "groq/meta-llama/llama-4-scout-17b-16e-instruct": { "alias": "Scout" },
-        "groq/openai/gpt-oss-120b": { "alias": "Quantum" }
+        "groq/openai/gpt-oss-120b": { "alias": "Quantum" },
+        "openrouter/deepseek/deepseek-v4-flash:free": { "alias": "DeepSeek" },
+        "openrouter/openrouter/owl-alpha": { "alias": "Owl" }
       }
     }
   },
