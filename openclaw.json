@@ -38,11 +38,6 @@
       }
     }
   },
-  "tools": {
-    "codeInterpreter": {
-      "enabled": true
-    }
-  },
   "channels": {
     "telegram": {
       "allowFrom": ["5689194495", "1892504865"]
