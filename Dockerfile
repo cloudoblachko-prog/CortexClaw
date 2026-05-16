@@ -123,7 +123,6 @@ ARG OPENCLAW_EXTENSIONS
 ARG OPENCLAW_BUNDLED_PLUGIN_DIR
 RUN --mount=type=cache,id=s/0d684363-2ac7-4237-88f0-d58f2a5a82ea-/root/.local/share/pnpm/store,target=/root/.local/share/pnpm/store,sharing=locked \
     CI=true pnpm prune --prod \
-      --config.offline=true \
       --config.supportedArchitectures.os=linux \
       --config.supportedArchitectures.cpu="$(node -p 'process.arch')" \
       --config.supportedArchitectures.libc=glibc && \
