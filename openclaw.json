@@ -24,7 +24,7 @@
           { "id": "openrouter/owl-alpha", "name": "Owl Alpha" }
         ]
       },
-      "sambanova": {
+      "openai": {
         "baseUrl": "https://api.sambanova.ai/v1",
         "models": [
           { "id": "DeepSeek-V3.2", "name": "DeepSeek V3.2" },
@@ -50,9 +50,9 @@
         "groq/meta-llama/llama-4-scout-17b-16e-instruct": { "alias": "Scout" },
         "openrouter/deepseek/deepseek-v4-flash:free": { "alias": "DS Flash" },
         "openrouter/openrouter/owl-alpha": { "alias": "Owl" },
-        "sambanova/DeepSeek-V3.2": { "alias": "DS 3.2" },
-        "sambanova/Meta-Llama-3.3-70B-Instruct": { "alias": "Llama 70B" },
-        "sambanova/gpt-oss-120b": { "alias": "Quantum" }
+        "openai/DeepSeek-V3.2": { "alias": "DS 3.2" },
+        "openai/Meta-Llama-3.3-70B-Instruct": { "alias": "Llama 70B" },
+        "openai/gpt-oss-120b": { "alias": "Quantum" }
       }
     }
   },
