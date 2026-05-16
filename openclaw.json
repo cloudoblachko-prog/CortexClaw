@@ -1,4 +1,11 @@
 {
+  "plugins": {
+    "entries": {
+      "memory-core": {
+        "enabled": false
+      }
+    }
+  },
   "models": {
     "providers": {
       "nvidia": {
@@ -36,9 +43,6 @@
   },
   "agents": {
     "defaults": {
-      "compaction": {
-        "reserveTokensFloor": 25000
-      },
       "model": {
         "primary": "nvidia/meta/llama-4-maverick-17b-128e-instruct"
       },
