@@ -21,7 +21,9 @@
         "baseUrl": "https://openrouter.ai/api/v1",
         "models": [
           { "id": "deepseek/deepseek-v4-flash:free", "name": "DeepSeek V4 Flash" },
-          { "id": "openrouter/owl-alpha", "name": "Owl Alpha" }
+          { "id": "openrouter/owl-alpha", "name": "Owl Alpha" },
+          { "id": "cognitivecomputations/dolphin-mistral-24b-venice-edition:free", "name": "Venice Uncensored" },
+          { "id": "nvidia/nemotron-3-super-120b-a12b:free", "name": "Nemotron Super 120B" }
         ]
       }
     }
@@ -41,7 +43,9 @@
         "nvidia/minimaxai/minimax-m2.7": { "alias": "Minimax" },
         "groq/meta-llama/llama-4-scout-17b-16e-instruct": { "alias": "Scout" },
         "openrouter/deepseek/deepseek-v4-flash:free": { "alias": "DS Flash" },
-        "openrouter/openrouter/owl-alpha": { "alias": "Owl" }
+        "openrouter/openrouter/owl-alpha": { "alias": "Owl" },
+        "openrouter/cognitivecomputations/dolphin-mistral-24b-venice-edition:free": { "alias": "Sanya (Uncensored)" },
+        "openrouter/nvidia/nemotron-3-super-120b-a12b:free": { "alias": "Nemotron" }
       }
     }
   },
