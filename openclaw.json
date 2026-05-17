@@ -1,11 +1,4 @@
 {
-  "plugins": {
-    "entries": {
-      "memory-core": {
-        "enabled": false
-      }
-    }
-  },
   "models": {
     "providers": {
       "nvidia": {
@@ -30,19 +23,14 @@
           { "id": "deepseek/deepseek-v4-flash:free", "name": "DeepSeek V4 Flash" },
           { "id": "openrouter/owl-alpha", "name": "Owl Alpha" }
         ]
-      },
-      "openai": {
-        "baseUrl": "https://api.sambanova.ai/v1",
-        "models": [
-          { "id": "DeepSeek-V3.2", "name": "DeepSeek V3.2" },
-          { "id": "Meta-Llama-3.3-70B-Instruct", "name": "Llama 3.3 70B" },
-          { "id": "gpt-oss-120b", "name": "GPT-OSS 120B" }
-        ]
       }
     }
   },
   "agents": {
     "defaults": {
+      "compaction": {
+        "reserveTokensFloor": 25000
+      },
       "model": {
         "primary": "nvidia/meta/llama-4-maverick-17b-128e-instruct"
       },
@@ -53,10 +41,7 @@
         "nvidia/minimaxai/minimax-m2.7": { "alias": "Minimax" },
         "groq/meta-llama/llama-4-scout-17b-16e-instruct": { "alias": "Scout" },
         "openrouter/deepseek/deepseek-v4-flash:free": { "alias": "DS Flash" },
-        "openrouter/openrouter/owl-alpha": { "alias": "Owl" },
-        "openai/DeepSeek-V3.2": { "alias": "DS 3.2" },
-        "openai/Meta-Llama-3.3-70B-Instruct": { "alias": "Llama 70B" },
-        "openai/gpt-oss-120b": { "alias": "Quantum" }
+        "openrouter/openrouter/owl-alpha": { "alias": "Owl" }
       }
     }
   },
