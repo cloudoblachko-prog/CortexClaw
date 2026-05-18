@@ -4,7 +4,8 @@
       "google": {
         "baseUrl": "https://generativelanguage.googleapis.com/v1beta/openai",
         "models": [
-          { "id": "gemini-3.1-flash-lite", "name": "Gemini 3.1 Flash Lite" },
+          { "id": "gemini-3.1-flash-lite", "name": "Gemini 3.1 Flash-Lite" },
+          { "id": "gemini-3.1-flash-lite-001", "name": "Gemini 3.1 Flash-Lite 001" },
           { "id": "gemini-3-flash", "name": "Gemini 3 Flash" }
         ]
       },
@@ -44,6 +45,7 @@
       },
       "models": {
         "google/gemini-3.1-flash-lite": { "alias": "Gemini 3.1 Lite" },
+        "google/gemini-3.1-flash-lite-001": { "alias": "Gemini 3.1 Lite (001)" },
         "google/gemini-3-flash": { "alias": "Gemini 3 Flash" },
         "nvidia/meta/llama-4-maverick-17b-128e-instruct": { "alias": "Maverick" },
         "nvidia/mistralai/mistral-large-3-675b-instruct-2512": { "alias": "Logic" },
