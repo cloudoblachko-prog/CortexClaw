@@ -40,8 +40,7 @@
         "reserveTokensFloor": 25000
       },
       "model": {
-        "primary": "google/gemini-3.1-flash-lite",
-        "vision": "google/gemini-3-flash"
+        "primary": "google/gemini-3.1-flash-lite"
       },
       "models": {
         "google/gemini-3.1-flash-lite": { "alias": "Gemini 3.1 Lite" },
