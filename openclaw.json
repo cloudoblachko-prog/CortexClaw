@@ -1,6 +1,13 @@
 {
   "models": {
     "providers": {
+      "google": {
+        "baseUrl": "https://generativelanguage.googleapis.com/v1beta/openai",
+        "models": [
+          { "id": "gemini-3.1-flash-lite", "name": "Gemini 3.1 Flash Lite" },
+          { "id": "gemini-3-flash", "name": "Gemini 3 Flash" }
+        ]
+      },
       "nvidia": {
         "baseUrl": "https://integrate.api.nvidia.com/v1",
         "models": [
@@ -22,7 +29,6 @@
         "models": [
           { "id": "deepseek/deepseek-v4-flash:free", "name": "DeepSeek V4 Flash" },
           { "id": "openrouter/owl-alpha", "name": "Owl Alpha" },
-          { "id": "cognitivecomputations/dolphin-mistral-24b-venice-edition:free", "name": "Venice Uncensored" },
           { "id": "nvidia/nemotron-3-super-120b-a12b:free", "name": "Nemotron Super 120B" }
         ]
       }
@@ -34,10 +40,12 @@
         "reserveTokensFloor": 25000
       },
       "model": {
-        "primary": "nvidia/meta/llama-4-maverick-17b-128e-instruct",
-        "image": "nvidia/meta/llama-4-maverick-17b-128e-instruct"
+        "primary": "google/gemini-3.1-flash-lite",
+        "vision": "google/gemini-3-flash"
       },
       "models": {
+        "google/gemini-3.1-flash-lite": { "alias": "Gemini 3.1 Lite" },
+        "google/gemini-3-flash": { "alias": "Gemini 3 Flash" },
         "nvidia/meta/llama-4-maverick-17b-128e-instruct": { "alias": "Maverick" },
         "nvidia/mistralai/mistral-large-3-675b-instruct-2512": { "alias": "Logic" },
         "nvidia/stepfun-ai/step-3.5-flash": { "alias": "Flash" },
@@ -45,14 +53,16 @@
         "groq/meta-llama/llama-4-scout-17b-16e-instruct": { "alias": "Scout" },
         "openrouter/deepseek/deepseek-v4-flash:free": { "alias": "DS Flash" },
         "openrouter/openrouter/owl-alpha": { "alias": "Owl" },
-        "openrouter/cognitivecomputations/dolphin-mistral-24b-venice-edition:free": { "alias": "Sanya (Uncensored)" },
         "openrouter/nvidia/nemotron-3-super-120b-a12b:free": { "alias": "Nemotron" }
       }
     }
   },
   "channels": {
     "telegram": {
-      "allowFrom": ["5689194495", "1892504865"]
+      "allowFrom": [
+        "5689194495",
+        "1892504865"
+      ]
     }
   }
 }
