@@ -34,7 +34,8 @@
         "reserveTokensFloor": 25000
       },
       "model": {
-        "primary": "nvidia/meta/llama-4-maverick-17b-128e-instruct"
+        "primary": "nvidia/meta/llama-4-maverick-17b-128e-instruct",
+        "image": "nvidia/meta/llama-4-maverick-17b-128e-instruct"
       },
       "models": {
         "nvidia/meta/llama-4-maverick-17b-128e-instruct": { "alias": "Maverick" },
