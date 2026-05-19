@@ -4,9 +4,7 @@
       "google": {
         "baseUrl": "https://generativelanguage.googleapis.com/v1beta/openai",
         "models": [
-          { "id": "gemini-3.1-flash-lite", "name": "Gemini 3.1 Flash Lite" },
-          { "id": "gemini-3.5-flash", "name": "Gemini 3.5 Flash" },
-          { "id": "gemini-3-flash-preview", "name": "Gemini 3 Flash (Preview)" }
+          { "id": "gemini-3.5-flash", "name": "Gemini 3.5 Flash" }
         ]
       },
       "nvidia": {
@@ -41,12 +39,10 @@
         "reserveTokensFloor": 25000
       },
       "model": {
-        "primary": "google/gemini-3.1-flash-lite"
+        "primary": "google/gemini-3.5-flash"
       },
       "models": {
-        "google/gemini-3.1-flash-lite": { "alias": "Gemini 3.1 Lite" },
         "google/gemini-3.5-flash": { "alias": "Gemini 3.5 Flash" },
-        "google/gemini-3-flash-preview": { "alias": "Gemini 3 Flash" },
         "nvidia/meta/llama-4-maverick-17b-128e-instruct": { "alias": "Maverick" },
         "nvidia/mistralai/mistral-large-3-675b-instruct-2512": { "alias": "Logic" },
         "nvidia/stepfun-ai/step-3.5-flash": { "alias": "Flash" },
