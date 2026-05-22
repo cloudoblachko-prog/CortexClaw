@@ -20,7 +20,8 @@
         "baseUrl": "https://api.groq.com/openai/v1",
         "models": [
           { "id": "meta-llama/llama-4-scout-17b-16e-instruct", "name": "Scout 17B" },
-          { "id": "whisper-large-v3-turbo", "name": "Whisper V3" }
+          { "id": "whisper-large-v3-turbo", "name": "Whisper V3" },
+          { "id": "openai/gpt-oss-120b", "name": "GPT-OSS 120B" }
         ]
       },
       "openrouter": {
@@ -28,8 +29,7 @@
         "models": [
           { "id": "deepseek/deepseek-v4-flash:free", "name": "DeepSeek V4 Flash" },
           { "id": "openrouter/owl-alpha", "name": "Owl Alpha" },
-          { "id": "nvidia/nemotron-3-super-120b-a12b:free", "name": "Nemotron Super 120B" },
-          { "id": "z-ai/glm-5.1", "name": "GLM 5.1" }
+          { "id": "nvidia/nemotron-3-super-120b-a12b:free", "name": "Nemotron Super 120B" }
         ]
       }
     }
@@ -49,10 +49,10 @@
         "nvidia/stepfun-ai/step-3.5-flash": { "alias": "Flash" },
         "nvidia/minimaxai/minimax-m2.7": { "alias": "Minimax" },
         "groq/meta-llama/llama-4-scout-17b-16e-instruct": { "alias": "Scout" },
+        "groq/openai/gpt-oss-120b": { "alias": "GPT OSS" },
         "openrouter/deepseek/deepseek-v4-flash:free": { "alias": "DS Flash" },
         "openrouter/openrouter/owl-alpha": { "alias": "Owl" },
-        "openrouter/nvidia/nemotron-3-super-120b-a12b:free": { "alias": "Nemotron" },
-        "openrouter/z-ai/glm-5.1": { "alias": "GLM 5.1" }
+        "openrouter/nvidia/nemotron-3-super-120b-a12b:free": { "alias": "Nemotron" }
       }
     }
   },
