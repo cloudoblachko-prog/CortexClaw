@@ -10,11 +10,8 @@
       "nvidia": {
         "baseUrl": "https://integrate.api.nvidia.com/v1",
         "models": [
-          { "id": "meta/llama-4-maverick-17b-128e-instruct", "name": "Maverick 17B" },
           { "id": "mistralai/mistral-large-3-675b-instruct-2512", "name": "Mistral Large" },
-          { "id": "minimaxai/minimax-m2.7", "name": "Minimax m2.7" },
           { "id": "z-ai/glm-5.1", "name": "GLM 5.1" },
-          { "id": "stepfun-ai/step-3.7-flash", "name": "Step 3.7 Flash" },
           { "id": "openai/gpt-oss-120b", "name": "GPT-OSS 120B" },
           { "id": "deepseek-ai/deepseek-v4-flash", "name": "DeepSeek V4 Flash" },
           { "id": "qwen/qwen3.5-397b-a17b", "name": "Qwen 3.5 397B" },
@@ -47,11 +44,8 @@
       },
       "models": {
         "google/gemini-3.5-flash": { "alias": "Gemini 3.5 Flash" },
-        "nvidia/meta/llama-4-maverick-17b-128e-instruct": { "alias": "Maverick" },
         "nvidia/mistralai/mistral-large-3-675b-instruct-2512": { "alias": "Logic" },
-        "nvidia/minimaxai/minimax-m2.7": { "alias": "Minimax" },
         "nvidia/z-ai/glm-5.1": { "alias": "GLM 5.1" },
-        "nvidia/stepfun-ai/step-3.7-flash": { "alias": "Step 3.7" },
         "nvidia/openai/gpt-oss-120b": { "alias": "GPT OSS" },
         "nvidia/deepseek-ai/deepseek-v4-flash": { "alias": "DS Flash" },
         "nvidia/qwen/qwen3.5-397b-a17b": { "alias": "Qwen 3.5" },
