@@ -41,7 +41,7 @@
         "reserveTokensFloor": 25000
       },
       "model": {
-        "primary": "z-ai/glm-5.1"
+        "primary": "nvidia/z-ai/glm-5.1"
       },
       "models": {
         "google/gemini-3.5-flash": { "alias": "Gemini 3.5 Flash" },
